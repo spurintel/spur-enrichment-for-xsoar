@@ -87,7 +87,6 @@ script:
 
             # Make sure the response is a dictionary
             if isinstance(response, dict):
-                # response = flatten(response)
                 response = fix_nested_client(response)
                 return CommandResults(
                     outputs_prefix='SpurContextAPI.Context',
